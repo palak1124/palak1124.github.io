@@ -112,18 +112,6 @@
   transform: scale(1.1);
 }
 
-.one-third.js-fullheight {
-  height: 80vh !important;  /* poori screen se chhota */
-  max-height: 600px;        /* ek fixed limit tak */
-}
-
-.profile-pic {
-  max-height: 500px;   /* jitni chhoti upar se chahiye utni */
-  width: auto;
-  display: block;
-  margin: 0 auto;      /* center me lane ke liye */
-  border-radius: 10px; /* optional styling */
-}
 
 
 </style>
@@ -152,31 +140,20 @@
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider owl-carousel">
-  <div class="slider-item">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-        
-        <!-- Image Section -->
-        <div class="one-third order-md-last">
-          <img src="images/Palak1.jpg" class="profile-pic" alt="Palak">
-        </div>
+		 <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url('images/Palak1.jpg');">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Palak </span></h1>
 
-        <!-- Text Section -->
-        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-          <div class="text">
-            <span class="subheading">Hello!</span>
-            <h1 class="mb-4 mt-3">I'm <span>Palak</span></h1>
-            <h2 class="mb-4">Aspiring Data Analyst</h2>
-            <p><a href="#project-section" class="btn btn-primary py-3 px-4">My Works</a></p>
-          </div>
-        </div>
-
-      </div> <!-- row yaha close hoga -->
-    </div>
-  </div>
-</div>
+						<!-- Element to contain animated typing -->
 
 <span id="typing-animation"></span>
 
