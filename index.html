@@ -103,12 +103,14 @@
 .zoom-effect {
   overflow: hidden;
   transition: transform 0.3s ease-out;
+  background-size: contain;   /* image puri dikhane ke liye */
+  background-repeat: no-repeat; /* repeat band karne ke liye */
+  background-position: center; /* center align */
 }
 
 .zoom-effect:hover {
   transform: scale(1.1);
 }
-
 
 </style>
 
