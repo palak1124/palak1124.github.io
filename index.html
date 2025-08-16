@@ -117,6 +117,15 @@
   max-height: 600px;        /* ek fixed limit tak */
 }
 
+.profile-pic {
+  max-height: 500px;   /* jitni chhoti upar se chahiye utni */
+  width: auto;
+  display: block;
+  margin: 0 auto;      /* center me lane ke liye */
+  border-radius: 10px; /* optional styling */
+}
+
+
 </style>
 
 
@@ -148,7 +157,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url('images/Palak1.jpg');">
+	          <div class="one-third order-md-last"> <img src="images/Palak1.jpg" class="profile-pic" alt="Palak"></div>
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
