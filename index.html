@@ -277,7 +277,28 @@
     font-size: 12.5px;
     line-height: 1.7;
 }
+.hero-video {
+    width: 100%;
+}
 
+.hero-video video {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+}
+
+.tech-stack {
+    margin-top: 18px;
+    width: 100%;
+}
+
+.tech-stack img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /* ===================== MOBILE ===================== */
 
@@ -490,7 +511,7 @@
   </h1>
 
   <p style="font-size:1.1rem; line-height:1.6; margin-bottom:20px; max-width:500px;">
-I’m an MBA Finance graduate who enjoys working with data and figuring out what the numbers are actually saying. I started exploring analytics through Excel and Power BI, and gradually got into SQL, dashboards, and business reporting. My finance background also makes me curious about the business side of numbers — not just how a metric changed, but why it changed. I’m currently looking for opportunities where I can learn, solve real business problems, and grow as an analyst.</p>
+MBA Finance graduate who enjoys working with data and figuring out what the numbers are actually saying. I started exploring analytics through Excel and Power BI, and gradually got into SQL, dashboards, and business reporting. My finance background also makes me curious about the business side of numbers — not just how a metric changed, but why it changed. I’m currently looking for opportunities where I can learn, solve real business problems, and grow as an analyst.</p>
 
 
   <a href="https://www.linkedin.com/in/palakmittan/" target="_blank" style="display:inline-block; margin-bottom:20px; color:#f1c40f; text-decoration:none; font-weight:600;">
@@ -505,22 +526,16 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
       
   <!-- Right Introduction Video -->
 <div class="col-md-6 d-flex align-items-center justify-content-center">
+<div class="hero-video">
+    <video controls>
+        <source src="video/Palak Intro.mp4" type="video/mp4">
+    </video>
 
-    <div class="intro-video-wrapper">
-
-        <video 
-            class="intro-video"
-            controls
-            playsinline
-            preload="metadata">
-
-          <source src="images/Palak Intro.mp4" type="video/mp4">
-
-            Your browser does not support the video tag.
-
-        </video>
-
+    <div class="tech-stack">
+        <img src="images/tech-stack.png" 
+             alt="Excel, Power BI, PostgreSQL, Python and Microsoft Fabric">
     </div>
+</div>
 
 </div>
 
