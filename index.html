@@ -112,7 +112,23 @@
   transform: scale(1.1);
 }
 
+/* Introduction Video */
 
+.intro-video-wrapper {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.intro-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
 
 </style>
 
@@ -169,10 +185,26 @@
 </div>
 
       
-      <!-- Right Background Image -->
-      <div class="col-md-6" 
-           style="background:url('images/Palak1.jpg') no-repeat center center/cover; min-height:500px; border-radius:10px;">
-      </div>
+  <!-- Right Introduction Video -->
+<div class="col-md-6 d-flex align-items-center justify-content-center">
+
+    <div class="intro-video-wrapper">
+
+        <video 
+            class="intro-video"
+            controls
+            playsinline
+            preload="metadata">
+
+          <source src="images/Palak Intro.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+</div>
 
     </div>
   </div>
