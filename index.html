@@ -129,13 +129,16 @@
     display: block;
     border-radius: 15px;
 }
-	/* ===================== SKILLS SECTION ===================== */
+
+/* ===================== SKILLS SECTION ===================== */
 
 .skills-section {
     background: #f5f7fa;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+/* Section Label */
 
 .skills-section .subheading {
     display: block;
@@ -144,47 +147,56 @@
     font-weight: 600;
     color: #00a6b2;
     margin-bottom: 8px;
+    text-transform: uppercase;
 }
+
+/* Section Description */
 
 .skills-section .heading-section p {
     color: #536174;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
-/* Skill Column */
+
+/* ===================== SKILL COLUMNS ===================== */
 
 .skills-column {
     background: #ffffff;
     border: 1px solid #e1e6ec;
     border-radius: 14px;
-    padding: 30px 32px;
+    padding: 28px 30px;
     height: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
 }
 
-/* Column Heading */
+
+/* ===================== COLUMN HEADING ===================== */
 
 .skills-column-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 11px;
     padding-bottom: 18px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     border-bottom: 1px solid #e5e9ee;
 }
 
 .skills-column-title h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #10213a;
 }
 
 .skill-dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .technical-dot {
@@ -196,10 +208,10 @@
 }
 
 
-/* Individual Skill */
+/* ===================== INDIVIDUAL SKILL ===================== */
 
 .skill-item {
-    padding: 21px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #e8ebef;
 }
 
@@ -207,53 +219,76 @@
     border-bottom: none;
 }
 
+
+/* Skill Name + Category */
+
 .skill-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .skill-main h4 {
     margin: 0;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: #14233d;
 }
 
 .skill-main span {
     font-family: monospace;
-    font-size: 12px;
+    font-size: 11px;
     color: #00a6b2;
     white-space: nowrap;
 }
 
+
+/* Skill Details */
+
 .skill-item p {
     margin: 0;
     color: #647083;
-    font-size: 13px;
+    font-size: 12.5px;
     line-height: 1.7;
 }
 
 
-/* Mobile */
+/* ===================== HOVER EFFECT ===================== */
+
+.skills-column {
+    transition: all 0.3s ease;
+}
+
+.skills-column:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(16, 33, 58, 0.07);
+}
+
+
+/* ===================== MOBILE ===================== */
 
 @media (max-width: 767px) {
 
+    .skills-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
     .skills-column {
-        margin-bottom: 25px;
-        padding: 25px 20px;
+        padding: 24px 22px;
+        margin-bottom: 20px;
     }
 
     .skill-main {
         align-items: flex-start;
         flex-direction: column;
-        gap: 3px;
+        gap: 4px;
     }
 
     .skill-main span {
-        font-size: 11px;
+        font-size: 10px;
     }
 
 }
@@ -504,7 +539,6 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
     <!-- Section Heading -->
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-8 heading-section text-center ftco-animate">
-        <span class="subheading">CAPABILITIES</span>
         <h1 class="big big-2">Skills</h1>
         <h2 class="mb-4">Skills & Tools</h2>
         <p>
@@ -532,7 +566,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>Power BI</h4>
-              <span>Dashboard Development</span>
+             
             </div>
 
             <p>
@@ -546,7 +580,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>SQL</h4>
-              <span>Data Analysis</span>
+              
             </div>
 
             <p>
@@ -560,7 +594,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>Microsoft Excel</h4>
-              <span>Advanced</span>
+              
             </div>
 
             <p>
@@ -574,26 +608,12 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>Python</h4>
-              <span>Data Manipulation</span>
+             
             </div>
 
             <p>
               NumPy · Pandas · Data Cleaning · Data Transformation ·
               Exploratory Data Analysis
-            </p>
-          </div>
-
-
-          <!-- CRM & MIS -->
-          <div class="skill-item">
-            <div class="skill-main">
-              <h4>CRM Systems & MIS Reporting</h4>
-              <span>Business Reporting</span>
-            </div>
-
-            <p>
-              CRM Data Management · Daily MIS · KPI Tracking ·
-              Team Performance Reports · Data Validation · EOD Reporting
             </p>
           </div>
 
@@ -616,7 +636,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>DCF Valuation</h4>
-              <span>Company Valuation</span>
+           
             </div>
 
             <p>
@@ -630,7 +650,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>3-Statement Financial Modeling</h4>
-              <span>Financial Modeling</span>
+             
             </div>
 
             <p>
@@ -644,7 +664,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>Budgeting & Forecasting</h4>
-              <span>Financial Planning</span>
+             
             </div>
 
             <p>
@@ -658,7 +678,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>LBO Modeling</h4>
-              <span>Private Equity Analysis</span>
+             
             </div>
 
             <p>
@@ -672,7 +692,7 @@ I’m an MBA Finance graduate who enjoys working with data and figuring out what
           <div class="skill-item">
             <div class="skill-main">
               <h4>Revenue Modeling</h4>
-              <span>Business Analysis</span>
+              
             </div>
 
             <p>
