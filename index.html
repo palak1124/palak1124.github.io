@@ -59,6 +59,133 @@ a {
 .about-mf .about-img img {
     margin-left: 10px;
 }
+	/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    min-height: 100vh;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 70px;
+}
+
+.hero-content {
+    color: #ffffff;
+}
+
+.hero-hello {
+    color: #ffbd39;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: #ffbd39;
+}
+
+.hero-content p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 580px;
+    margin-bottom: 25px;
+}
+
+.linkedin-link {
+    color: #ffbd39;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.linkedin-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   WORK BUTTON
+========================= */
+
+.works-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.works-btn:hover {
+    background: #ffbd39;
+    border-color: #ffbd39;
+    color: #000000;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   INTRO VIDEO
+========================= */
+
+.hero-video {
+    width: 100%;
+    max-width: 620px;
+}
+
+.hero-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    background: #111111;
+}
+
+
+/* =========================
+   TECH STACK IMAGE
+========================= */
+
+.tech-stack {
+    width: 100%;
+    max-width: 620px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.tech-stack img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 
 /* =========================================================
@@ -160,21 +287,6 @@ a {
     border-radius: 15px;
 }
 
-
-/* =========================================================
-   HERO VIDEO
-========================================================= */
-
-.hero-video {
-    width: 100%;
-}
-
-.hero-video video {
-    width: 100%;
-    display: block;
-    border-radius: 18px;
-    background: #111111;
-}
 
 
 /* =========================================================
@@ -604,17 +716,7 @@ a {
     }
 
 
-    /* Hero Video */
 
-    .hero-video video {
-        border-radius: 12px;
-    }
-
-    .intro-video-wrapper {
-        max-width: 100%;
-    }
-
-}
 
 
 /* =========================================================
@@ -664,52 +766,70 @@ a {
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-	<section id="home" style="background-color:#000; min-height:100vh; display:flex; align-items:center;">
-  <div class="container">
-    <div class="row align-items-center">
-<!-- Left Text -->
-<div class="col-md-6 text-white">
-  <span style="color:#f1c40f; font-weight:600;">HELLO!</span>
-  <h1 style="font-size:3rem; font-weight:700; margin-top:15px; margin-bottom:15px;">
-    I'm <span style="color:#f1c40f;">Palak</span>
-  </h1>
+	  
+	 <section id="home-section" class="hero">
+  <div class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
 
-  <p style="font-size:1.1rem; line-height:1.6; margin-bottom:20px; max-width:500px;">
-MBA Finance graduate who enjoys working with data and figuring out what the numbers are actually saying. I started exploring analytics through Excel and Power BI, and gradually got into SQL, dashboards, and business reporting. My finance background also makes me curious about the business side of numbers — not just how a metric changed, but why it changed. I’m currently looking for opportunities where I can learn, solve real business problems, and grow as an analyst.</p>
+        <!-- LEFT CONTENT -->
+        <div class="col-md-6 hero-content">
+
+          <span class="hero-hello">HELLO!</span>
+
+          <h1>
+            I'm <span>Palak</span>
+          </h1>
+
+          <p>
+            MBA Finance graduate who enjoys working with data and figuring out
+            what the numbers are actually saying. I started exploring analytics
+            through Excel and Power BI, and gradually got into SQL, dashboards,
+            and business reporting. My finance background also makes me curious
+            about the business side of numbers — not just how a metric changed,
+            but why it changed.
+          </p>
+
+          <a href="https://www.linkedin.com/in/palakmittan/"
+             target="_blank"
+             class="linkedin-link">
+            → Connect with me on LinkedIn
+          </a>
+
+          <br><br>
+
+          <a href="https://github.com/palak1124?tab=repositories"
+             target="_blank"
+             class="works-btn">
+            MY WORKS
+          </a>
+
+        </div>
 
 
-  <a href="https://www.linkedin.com/in/palakmittan/" target="_blank" style="display:inline-block; margin-bottom:20px; color:#f1c40f; text-decoration:none; font-weight:600;">
-    → Connect with me on LinkedIn
-  </a>
-  <br>
-  <a href="https://github.com/palak1124?tab=repositories" style="padding:10px 25px; border:1px solid #fff; border-radius:30px; color:#fff; text-decoration:none; font-weight:500;">
-    MY WORKS
-  </a>
-</div>
+        <!-- RIGHT SIDE -->
+        <div class="col-md-6 hero-right">
 
-      
-  <!-- Right Introduction Video -->
-<div class="col-md-6 d-flex align-items-center justify-content-center">
-<div class="hero-video">
-    <video controls>
-        <source src="images/Palak Intro.mp4" type="video/mp4">
-    </video>
-</div>
+          <!-- VIDEO -->
+          <div class="hero-video">
+            <video controls playsinline preload="metadata">
+              <source src="images/Palak Intro.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
-	<div class="tech-stack">
-    <img src="images/tech-stack.png" alt="Excel, Power BI, PostgreSQL, Python and Microsoft Fabric">
-</div>
+          <!-- TECH STACK IMAGE -->
+          <div class="tech-stack">
+            <img src="images/tech-stack.png"
+                 alt="Excel, Power BI, PostgreSQL, Python and Microsoft Fabric">
+          </div>
 
-</div>
+        </div>
 
+      </div>
     </div>
   </div>
 </section>
-
-</section>
-
-
 <span id="typing-animation"></span>
 
 						<script>
