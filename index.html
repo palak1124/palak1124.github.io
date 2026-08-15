@@ -23,103 +23,133 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-
 <style>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+/* =========================================================
+   GLOBAL / COMMON
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   ABOUT / INTRO
+========================================================= */
 
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .about-mf .about-img {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 
+/* =========================================================
+   SKILL PROGRESS
+========================================================= */
+
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: .7rem;
+    background-color: #222222;
 }
 
 .skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
+    height: .7rem;
+    background-color: #ffbd39;
 }
 
 
-/* Animation styles */
+/* =========================================================
+   TYPING ANIMATION
+========================================================= */
+
 #typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end) infinite;
 }
 
 #typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #cccccc;
+    animation: typing-cursor 0.5s ease-in-out infinite;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+    from {
+        width: 5px;
+    }
+
+    to {
+        width: 0;
+    }
 }
 
 
-/* project image zoom effect */
+/* =========================================================
+   PROJECT IMAGE ZOOM
+========================================================= */
 
 .zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-  background-size: contain;   /* image puri dikhane ke liye */
-  background-repeat: no-repeat; /* repeat band karne ke liye */
-  background-position: center; /* center align */
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Introduction Video */
+
+/* =========================================================
+   INTRODUCTION VIDEO
+========================================================= */
 
 .intro-video-wrapper {
     width: 100%;
     max-width: 550px;
     border-radius: 15px;
     overflow: hidden;
-    background: #111;
+    background: #111111;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
@@ -129,13 +159,34 @@
     display: block;
     border-radius: 15px;
 }
-/* ===================== SKILLS SECTION ===================== */
+
+
+/* =========================================================
+   HERO VIDEO
+========================================================= */
+
+.hero-video {
+    width: 100%;
+}
+
+.hero-video video {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+    background: #111111;
+}
+
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
 
 .skills-section {
     background: #000000;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 
 /* Section Label */
 
@@ -144,10 +195,11 @@
     font-size: 13px;
     letter-spacing: 3px;
     font-weight: 600;
-    color: #00a6b2;
+    color: #ffbd39;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
 
 /* Main Heading */
 
@@ -158,10 +210,11 @@
     margin-bottom: 15px;
 }
 
+
 /* Description */
 
 .skills-section .heading-section p {
-    color: #a5a5a5;
+    color: #bdbdbd;
     font-size: 15px;
     line-height: 1.7;
     max-width: 700px;
@@ -169,12 +222,14 @@
 }
 
 
-/* ===================== SKILL CARDS ===================== */
+/* =========================================================
+   SKILLS COLUMNS
+========================================================= */
 
 .skills-column {
     background: #0b0b0b;
-    border: 1px solid #262626;
-    border-radius: 12px;
+    border: 1px solid #292929;
+    border-radius: 14px;
     padding: 30px 32px;
     height: 100%;
 
@@ -184,12 +239,14 @@
 }
 
 .skills-column:hover {
-    border-color: #333333;
+    border-color: #ffbd39;
     transform: translateY(-3px);
 }
 
 
-/* ===================== COLUMN HEADING ===================== */
+/* =========================================================
+   SKILLS COLUMN TITLE
+========================================================= */
 
 .skills-column-title {
     display: flex;
@@ -210,7 +267,9 @@
 }
 
 
-/* Accent Dots */
+/* =========================================================
+   SKILL DOT
+========================================================= */
 
 .skill-dot {
     width: 8px;
@@ -221,15 +280,17 @@
 }
 
 .technical-dot {
-    background: #00a6b2;
+    background: #ffbd39;
 }
 
 .finance-dot {
-    background: #e0a72f;
+    background: #ffbd39;
 }
 
 
-/* ===================== INDIVIDUAL SKILLS ===================== */
+/* =========================================================
+   INDIVIDUAL SKILLS
+========================================================= */
 
 .skill-item {
     padding: 20px 0;
@@ -264,7 +325,7 @@
 .skill-main span {
     font-family: monospace;
     font-size: 11px;
-    color: #00a6b2;
+    color: #ffbd39;
     white-space: nowrap;
 }
 
@@ -273,44 +334,228 @@
 
 .skill-item p {
     margin: 0;
-    color: #8f8f8f;
+    color: #999999;
     font-size: 12.5px;
     line-height: 1.7;
 }
-.hero-video {
-    width: 100%;
+
+
+/* =========================================================
+   CERTIFICATIONS SECTION
+========================================================= */
+
+.certifications-section {
+    background: #000000;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.hero-video video {
-    width: 100%;
+
+/* Section Label */
+
+.certifications-section .subheading {
     display: block;
-    border-radius: 18px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #ffbd39;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-/* ===================== TECH STACK UNDER VIDEO ===================== */
 
-.tech-stack {
-    width: 100%;
-    height: 120px;
-    margin-top: 10px;
+/* Heading */
+
+.certifications-section .heading-section h2 {
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+
+.certifications-section .heading-section p {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CERTIFICATE CARD
+========================================================= */
+
+.certificate-card {
+    background: #0b0b0b;
+
+    border: 1px solid #292929;
+    border-radius: 14px;
+
+    min-height: 180px;
+
+    padding: 28px;
+
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #ffbd39;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   CERTIFICATE ICON
+========================================================= */
+
+.certificate-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    display: flex;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
+
+    background: #ffbd39;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+
+    color: #000000;
 }
 
-.tech-stack img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
+
+/* =========================================================
+   CERTIFICATE CONTENT
+========================================================= */
+
+.certificate-content h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 17px;
+    line-height: 1.45;
+
+    font-weight: 600;
+
+    color: #ffffff;
 }
 
-/* ===================== MOBILE ===================== */
+.certificate-provider {
+    margin: 0 0 12px 0;
+
+    font-family: monospace;
+
+    font-size: 13px;
+
+    color: #999999;
+}
+
+
+/* Certificate Link */
+
+.certificate-content a {
+    color: #ffbd39;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.certificate-content a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   NAVIGATION ACCENT
+========================================================= */
+
+.navbar-nav .nav-link:hover {
+    color: #ffbd39 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffbd39 !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    background-color: #ffbd39;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary {
+    background-color: #ffbd39;
+    border-color: #ffbd39;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Outline Button */
+
+.btn-outline-primary {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffbd39;
+    border-color: #ffbd39;
+    color: #000000;
+}
+
+
+/* =========================================================
+   GENERAL YELLOW ACCENT
+========================================================= */
+
+.text-yellow {
+    color: #ffbd39 !important;
+}
+
+.bg-yellow {
+    background-color: #ffbd39 !important;
+}
+
+.border-yellow {
+    border-color: #ffbd39 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 767px) {
+
+    /* Skills */
 
     .skills-section {
         padding-top: 70px;
@@ -336,154 +581,66 @@
         font-size: 10px;
     }
 
-}
-/* ===================== MOBILE ===================== */
 
-@media (max-width: 767px) {
+    /* Certifications */
 
-    .skills-section {
+    .certifications-section {
         padding-top: 70px;
         padding-bottom: 70px;
     }
 
-    .skills-column {
-        padding: 24px 22px;
-        margin-bottom: 20px;
+    .certifications-section .heading-section h2 {
+        font-size: 32px;
     }
-
-    .skill-main {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .skill-main span {
-        font-size: 10px;
-    }
-
-}
-	/* ===================== CERTIFICATIONS ===================== */
-
-.certifications-section {
-    background: #f5f7fa;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.certifications-section .subheading {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 3px;
-    font-weight: 600;
-    color: #00a6b2;
-    margin-bottom: 8px;
-}
-
-.certifications-section .heading-section p {
-    color: #536174;
-    font-size: 16px;
-}
-
-
-/* Certificate Card */
-
-.certificate-card {
-    background: #ffffff;
-    border: 1px solid #dfe5ec;
-    border-radius: 15px;
-
-    min-height: 180px;
-
-    padding: 28px;
-
-    display: flex;
-    align-items: flex-start;
-
-    gap: 20px;
-
-    transition: all 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
-    border-color: #cbd5df;
-}
-
-
-/* Certificate Icon */
-
-.certificate-icon {
-    width: 52px;
-    height: 52px;
-
-    min-width: 52px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #f5e8bf;
-
-    border-radius: 12px;
-
-    font-size: 24px;
-}
-
-
-/* Certificate Content */
-
-.certificate-content h3 {
-    margin: 0 0 8px 0;
-
-    font-size: 17px;
-    line-height: 1.45;
-
-    font-weight: 600;
-
-    color: #10213a;
-}
-
-.certificate-provider {
-    margin: 0 0 12px 0;
-
-    font-family: monospace;
-
-    font-size: 13px;
-
-    color: #667386;
-}
-
-.certificate-content a {
-    color: #00a6b2;
-
-    font-size: 14px;
-
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-.certificate-content a:hover {
-    color: #00858e;
-    text-decoration: underline;
-}
-
-
-/* Mobile */
-
-@media (max-width: 767px) {
 
     .certificate-card {
         margin-bottom: 20px;
         min-height: auto;
+        padding: 22px;
+    }
+
+    .certificate-content h3 {
+        font-size: 16px;
+    }
+
+
+    /* Hero Video */
+
+    .hero-video video {
+        border-radius: 12px;
+    }
+
+    .intro-video-wrapper {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .skills-column {
+        padding: 20px;
+    }
+
+    .certificate-card {
+        gap: 14px;
+    }
+
+    .certificate-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 20px;
     }
 
 }
 
 </style>
-
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -536,13 +693,12 @@ MBA Finance graduate who enjoys working with data and figuring out what the numb
 <div class="col-md-6 d-flex align-items-center justify-content-center">
 <div class="hero-video">
     <video controls>
-        <source src="video/Palak Intro.mp4" type="video/mp4">
+        <source src="images/Palak Intro.mp4" type="video/mp4">
     </video>
+</div>
 
-    <div class="tech-stack">
-        <img src="images/tech-stack.png" 
-             alt="Excel, Power BI, PostgreSQL, Python and Microsoft Fabric">
-    </div>
+	<div class="tech-stack">
+    <img src="images/tech-stack.png" alt="Excel, Power BI, PostgreSQL, Python and Microsoft Fabric">
 </div>
 
 </div>
