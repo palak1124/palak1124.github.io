@@ -129,11 +129,10 @@
     display: block;
     border-radius: 15px;
 }
-
 /* ===================== SKILLS SECTION ===================== */
 
 .skills-section {
-    background: #f5f7fa;
+    background: #000000;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -146,30 +145,47 @@
     letter-spacing: 3px;
     font-weight: 600;
     color: #00a6b2;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-/* Section Description */
+/* Main Heading */
+
+.skills-section .heading-section h2 {
+    color: #ffffff !important;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Description */
 
 .skills-section .heading-section p {
-    color: #536174;
+    color: #a5a5a5;
     font-size: 15px;
     line-height: 1.7;
-    max-width: 720px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 
-/* ===================== SKILL COLUMNS ===================== */
+/* ===================== SKILL CARDS ===================== */
 
 .skills-column {
-    background: #ffffff;
-    border: 1px solid #e1e6ec;
-    border-radius: 14px;
-    padding: 28px 30px;
+    background: #0b0b0b;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 30px 32px;
     height: 100%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+
+    box-shadow: none;
+
+    transition: all 0.3s ease;
+}
+
+.skills-column:hover {
+    border-color: #333333;
+    transform: translateY(-3px);
 }
 
 
@@ -179,17 +195,22 @@
     display: flex;
     align-items: center;
     gap: 11px;
+
     padding-bottom: 18px;
     margin-bottom: 2px;
-    border-bottom: 1px solid #e5e9ee;
+
+    border-bottom: 1px solid #292929;
 }
 
 .skills-column-title h3 {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
-    color: #10213a;
+    color: #ffffff;
 }
+
+
+/* Accent Dots */
 
 .skill-dot {
     width: 8px;
@@ -208,11 +229,11 @@
 }
 
 
-/* ===================== INDIVIDUAL SKILL ===================== */
+/* ===================== INDIVIDUAL SKILLS ===================== */
 
 .skill-item {
     padding: 20px 0;
-    border-bottom: 1px solid #e8ebef;
+    border-bottom: 1px solid #222222;
 }
 
 .skill-item:last-child {
@@ -220,7 +241,7 @@
 }
 
 
-/* Skill Name + Category */
+/* Skill Name */
 
 .skill-main {
     display: flex;
@@ -234,8 +255,11 @@
     margin: 0;
     font-size: 15px;
     font-weight: 600;
-    color: #14233d;
+    color: #ffffff;
 }
+
+
+/* Skill Category */
 
 .skill-main span {
     font-family: monospace;
@@ -249,24 +273,41 @@
 
 .skill-item p {
     margin: 0;
-    color: #647083;
+    color: #8f8f8f;
     font-size: 12.5px;
     line-height: 1.7;
 }
 
 
-/* ===================== HOVER EFFECT ===================== */
+/* ===================== MOBILE ===================== */
 
-.skills-column {
-    transition: all 0.3s ease;
+@media (max-width: 767px) {
+
+    .skills-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .skills-section .heading-section h2 {
+        font-size: 32px;
+    }
+
+    .skills-column {
+        padding: 24px 22px;
+        margin-bottom: 20px;
+    }
+
+    .skill-main {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .skill-main span {
+        font-size: 10px;
+    }
+
 }
-
-.skills-column:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(16, 33, 58, 0.07);
-}
-
-
 /* ===================== MOBILE ===================== */
 
 @media (max-width: 767px) {
